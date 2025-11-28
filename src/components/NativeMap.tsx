@@ -1,3 +1,4 @@
+import { Asset } from 'expo-asset';
 import React from 'react';
 import { LeafletView, LatLng } from 'react-native-leaflet-view';
 
@@ -20,6 +21,9 @@ export default function NativeMap({
   zoomLevel = DEFAULT_ZOOM,
 }: Props): React.ReactElement {
   const centerLatLng: LatLng = { lat: center[1], lng: center[0] };
+  const htmlAsset = Asset.fromModule(require('../../assets/leaflet.html'));
+  const webviewSource = { uri: htmlAsset.uri };
+
   return (
     <LeafletView
       mapCenterPosition={centerLatLng}
@@ -29,6 +33,15 @@ export default function NativeMap({
       mapShapes={DEFAULT_SHAPES}
       zoomControl={MAP_UI.zoomControl}
       attributionControl={MAP_UI.attributionControl}
+      source={webviewSource}
+      injectedJavaScript={`
+        setTimeout(() => {
+          if (window.ReactNativeWebView) {
+            window.ReactNativeWebView.postMessage(JSON.stringify({ msg: 'MAP_READY', payload: {} }));
+          }
+        }, 1000);
+        true;
+      `}
     />
   );
 }
