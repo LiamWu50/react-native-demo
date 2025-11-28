@@ -1,10 +1,10 @@
-import { Link, Tabs } from "expo-router";
-import { TouchableOpacity, Text, StyleSheet } from "react-native";
-import { SimpleLineIcons } from "@expo/vector-icons";
+import { SimpleLineIcons } from '@expo/vector-icons';
+import { Link, Tabs } from 'expo-router';
+import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 
 const TabLayout = () => {
   type HeaderButtonProps = React.ComponentProps<typeof Link> & {
-    name: React.ComponentProps<typeof SimpleLineIcons>["name"];
+    name: React.ComponentProps<typeof SimpleLineIcons>['name'];
   };
 
   const HeaderButton = (props: HeaderButtonProps) => {
@@ -26,7 +26,7 @@ const TabLayout = () => {
   return (
     <Tabs
       screenOptions={{
-        headerTitleAlign: "center",
+        headerTitleAlign: 'center',
         headerTitle: () => <LogoTitle />,
         headerLeft: () => <HeaderButton name="bell" href="/articles" style={style.headerLeft} />,
         headerRight: () => (
@@ -35,9 +35,10 @@ const TabLayout = () => {
             <HeaderButton name="options" href="/settings" style={style.headerRight} />
           </>
         ),
-      }}>
-      <Tabs.Screen name="map" options={{ title: "地图" }} />
-      <Tabs.Screen name="user" options={{ title: "用户" }} />
+      }}
+    >
+      <Tabs.Screen name="index" options={{ title: '地图' }} />
+      <Tabs.Screen name="user" options={{ title: '用户' }} />
     </Tabs>
   );
 };
@@ -49,6 +50,6 @@ const style = StyleSheet.create({
   headerRight: {
     marginRight: 10,
   },
-})
+});
 
 export default TabLayout;

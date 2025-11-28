@@ -7,7 +7,11 @@
     "android": "expo run:android",
     "prebuild:android": "expo prebuild -p android",
     "run:android": "expo run:android",
-    "ios": "expo run:ios"
+    "ios": "expo run:ios",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "@expo/metro-config": "~54.0.2",
@@ -17,6 +21,7 @@
     "expo": "~54.0.25",
     "expo-asset": "~12.0.10",
     "expo-file-system": "~19.0.19",
+    "expo-linking": "~8.0.9",
     "expo-router": "~6.0.15",
     "expo-status-bar": "~3.0.8",
     "react": "19.1.0",
@@ -31,6 +36,15 @@
     "@types/geojson": "^7946.0.16",
     "@types/react": "~19.1.10",
     "@types/react-native": "^0.73.0",
+    "@typescript-eslint/eslint-plugin": "^8.48.0",
+    "@typescript-eslint/parser": "^8.48.0",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-native": "^5.0.0",
+    "prettier": "^3.7.1",
     "typescript": "~5.9.2"
   }
 }

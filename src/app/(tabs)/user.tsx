@@ -37,7 +37,14 @@ const styles = StyleSheet.create({
   headerText: { marginLeft: 12 },
   name: { fontSize: 18, fontWeight: '600', color: '#111' },
   sub: { fontSize: 12, color: '#666', marginTop: 4 },
-  card: { backgroundColor: '#fff', borderRadius: 12, padding: 16, marginBottom: 12, borderWidth: 1, borderColor: '#eee' },
+  card: {
+    backgroundColor: '#fff',
+    borderRadius: 12,
+    padding: 16,
+    marginBottom: 12,
+    borderWidth: 1,
+    borderColor: '#eee',
+  },
   label: { fontSize: 14, color: '#888' },
   value: { fontSize: 16, color: '#222', marginTop: 6 },
 });

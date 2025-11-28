@@ -1,6 +1,14 @@
 import React from 'react';
 import { LeafletView, LatLng } from 'react-native-leaflet-view';
-import { BASE_LAYERS, DEFAULT_CENTER, DEFAULT_ZOOM, DEFAULT_MARKER_ICON, DEFAULT_SHAPES, MAP_UI } from '../constant/map';
+
+import {
+  BASE_LAYERS,
+  DEFAULT_CENTER,
+  DEFAULT_ZOOM,
+  DEFAULT_MARKER_ICON,
+  DEFAULT_SHAPES,
+  MAP_UI,
+} from '../constant/map';
 
 type Props = {
   center?: [number, number];
@@ -17,13 +25,10 @@ export default function NativeMap({
       mapCenterPosition={centerLatLng}
       zoom={zoomLevel}
       mapLayers={BASE_LAYERS}
-      mapMarkers={[
-        { id: 'pt', position: centerLatLng, ...DEFAULT_MARKER_ICON },
-      ]}
+      mapMarkers={[{ id: 'pt', position: centerLatLng, ...DEFAULT_MARKER_ICON }]}
       mapShapes={DEFAULT_SHAPES}
       zoomControl={MAP_UI.zoomControl}
       attributionControl={MAP_UI.attributionControl}
     />
   );
 }
-

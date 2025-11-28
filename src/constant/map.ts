@@ -1,4 +1,11 @@
-import { LatLng, MapLayer, MapLayerType, MapShape, MapShapeType, MapMarker } from 'react-native-leaflet-view';
+import {
+  LatLng,
+  MapLayer,
+  MapLayerType,
+  MapShape,
+  MapShapeType,
+  MapMarker,
+} from 'react-native-leaflet-view';
 
 export const DEFAULT_CENTER: LatLng = { lat: 39.9042, lng: 116.4074 };
 export const DEFAULT_ZOOM = 13;
@@ -50,4 +57,3 @@ export const MAP_UI = {
   zoomControl: false,
   attributionControl: false,
 };
-
