@@ -3,7 +3,11 @@ import { TouchableOpacity, Text, StyleSheet } from "react-native";
 import { SimpleLineIcons } from "@expo/vector-icons";
 
 const TabLayout = () => {
-  const HeaderButton = (props) => {
+  type HeaderButtonProps = React.ComponentProps<typeof Link> & {
+    name: React.ComponentProps<typeof SimpleLineIcons>["name"];
+  };
+
+  const HeaderButton = (props: HeaderButtonProps) => {
     const { name, ...rest } = props;
 
     return (
@@ -15,7 +19,7 @@ const TabLayout = () => {
     );
   };
 
-  const LogoTitle = (props) => {
+  const LogoTitle = () => {
     return <Text>地图导航</Text>;
   };
 
@@ -23,11 +27,11 @@ const TabLayout = () => {
     <Tabs
       screenOptions={{
         headerTitleAlign: "center",
-        headerTitle: (props) => <LogoTitle {...props} />,
+        headerTitle: () => <LogoTitle />,
         headerLeft: () => <HeaderButton name="bell" href="/articles" style={style.headerLeft} />,
         headerRight: () => (
           <>
-            <HeaderButton name="magnifier" href="/search" style={style.headerRight} />
+            <HeaderButton name="magnifier" href="/login" style={style.headerRight} />
             <HeaderButton name="options" href="/settings" style={style.headerRight} />
           </>
         ),

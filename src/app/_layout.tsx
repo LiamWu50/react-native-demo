@@ -19,8 +19,7 @@ const Layout = () => {
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
 
       {/* cards */}
-      <Stack.Screen name="map/index" options={{ title: "地图" }} />
-      <Stack.Screen name="user/index" options={{ title: "用户" }} />
+      <Stack.Screen name="login/index" options={{ title: "登录" }} />
     </Stack>
   );
 };
