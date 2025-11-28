@@ -1,13 +1,13 @@
 import { Asset } from 'expo-asset';
 import React from 'react';
-import { LeafletView, LatLng } from 'react-native-leaflet-view';
+import { LatLng,LeafletView } from 'react-native-leaflet-view';
 
 import {
   BASE_LAYERS,
   DEFAULT_CENTER,
-  DEFAULT_ZOOM,
   DEFAULT_MARKER_ICON,
   DEFAULT_SHAPES,
+  DEFAULT_ZOOM,
   MAP_UI,
 } from '../constant/map';
 

@@ -1,6 +1,6 @@
 import { SimpleLineIcons } from '@expo/vector-icons';
 import { Link, Tabs } from 'expo-router';
-import { TouchableOpacity, Text, StyleSheet } from 'react-native';
+import { StyleSheet,Text, TouchableOpacity } from 'react-native';
 
 const TabLayout = () => {
   type HeaderButtonProps = React.ComponentProps<typeof Link> & {

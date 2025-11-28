@@ -2,9 +2,9 @@ import {
   LatLng,
   MapLayer,
   MapLayerType,
+  MapMarker,
   MapShape,
   MapShapeType,
-  MapMarker,
 } from 'react-native-leaflet-view';
 
 export const DEFAULT_CENTER: LatLng = { lat: 39.9042, lng: 116.4074 };
